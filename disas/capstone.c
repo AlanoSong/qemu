@@ -106,7 +106,11 @@ static cs_err cap_disas_start(disassemble_info *info, csh *handle)
          * is compiled without AT&T syntax); the user will just have
          * to deal with the Intel syntax.
          */
-        cs_option(*handle, CS_OPT_SYNTAX, CS_OPT_SYNTAX_ATT);
+
+        /*
+         * Alano: Disasm code is more clear under Intel style.
+         */
+        cs_option(*handle, CS_OPT_SYNTAX, CS_OPT_SYNTAX_INTEL);
         break;
     }
 
